@@ -118,26 +118,106 @@ def is_divisible(a, b):
 
 '''
 '''
-        #6  
-def guess_game(max_tries=5):
-    import random
-    liczba = random.randint(1, 10)
-    proby = 0
-    while proby < max_tries:
-        guess = int(input("Podaj liczbe: "))
-        if guess == liczba:
-            print("Brawo zgadłeś")
-            break
+            #6  
+    def guess_game(max_tries=5):
+        import random
+        liczba = random.randint(1, 10)
+        proby = 0
+        while proby < max_tries:
+            guess = int(input("Podaj liczbe: "))
+            if guess == liczba:
+                print("Brawo zgadłeś")
+                break
+            else:
+                print("Nie udało się")
+                proby += 1
         else:
-            print("Nie udało się")
-            proby += 1
-    else:
-        print(f"Przegrałeś! Prawidłowa liczba to {liczba}")
+            print(f"Przegrałeś! Prawidłowa liczba to {liczba}")
 
+                
+
+
+    #7
+def sum_loop(nums):
+        suma = 0;
+        Licznik =[];
+    for i in range(1,6):
+        Licznik = int(input("Podaj swoje liczby: "))
+        suma = +1;
+        print(f"Suma wynosi {suma}")
+
+
+       
+
+
+
+        
+
+
+
+# 8
+def znajdz_max():
+    lista = []
+    n = int(input("Ile liczb chcesz podać? "))
+    if n <= 0:
+        print("Zero się nie liczy")
+        return
+    for i in range(n):
+        liczba = int(input(f"Podaj liczbę {i+1}: "))
+        lista.append(liczba)
+    najwieksza_liczba = max(lista)
+    print(f"Największa liczba to: {najwieksza_liczba}")
+
+
+
+    
+
+
+
+
+
+
+def kalkulator_z_bledami():
+    try:
+        
+        liczba1_str = input("Podaj pierwszą liczbę: ")
+        liczba1 = float(liczba1_str) # Konwersja na liczbę zmiennoprzecinkową
+
+        
+        operator = input("Podaj operator (+, -, *, /): ")
+
+       
+        liczba2_str = input("Podaj drugą liczbę: ")
+        liczba2 = float(liczba2_str) 
+
+        if operator == '+':
+            wynik = liczba1 + liczba2
+        elif operator == '-':
+            wynik = liczba1 - liczba2
+        elif operator == '*':
+            wynik = liczba1 * liczba2
+        elif operator == '/':
+            if liczba2 == 0:
+               
+                print("Błąd: Nie można dzielić przez zero!")
+                return 
+            else:
+                wynik = liczba1 / liczba2
+        else:
             
+            print("Błąd: Nieznany operator.")
+            return 
+
+        
+        print(f"Wynik: {wynik}")
+
+    except ValueError:
+        
+        print("Błąd: Wprowadzono nieprawidłową wartość liczbową.")
+    
+
+
+
+
+
 '''
-#7
-
-
-
-
