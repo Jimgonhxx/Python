@@ -1,4 +1,4 @@
-
+'''
 print("Tabliczka mnożenia")
 liczba = int(input("Podaj liczbę: "))
 for i in range(1, 11):
@@ -67,3 +67,77 @@ else:
     print(f"game over {tajna}.")
 print()
 print()
+'''
+
+#1
+'''
+def tabliczka_mnożenia (liczba):
+    for i in range(1, 11):
+        print(f"{liczba} x {i} = {liczba * i}")
+        print()
+
+#2
+
+def read_shoppign():
+    while True:
+        produkt = input("dodaj produkt, zaczończenie to enter pusty")
+        if produkt == "":
+            break
+        zakupy = []
+        zakupy.append(produkt)
+    print("twoja lista zakupów", zakupy)
+
+
+    #3
+
+    def calc(a, b):
+        if b != 0: 
+            print("suma", a + b)
+            print("różnica", a - b)
+            print("iloczyn", a * b)
+            print("iloraz", a / b)
+
+
+#4
+
+def kmh_to_mph (kmh):
+    mph = kmh / 1.61
+    kmh = int(input("Podaj prędkość  w km/h"))
+    print("f {kmh} km/h to około {mph.round(2)} mph")
+
+
+#5 try/expect
+
+def is_divisible(a, b):
+    b = int(input("Podaj liczbe"))
+    if b == 0 : ValueError("Nie dzielimy przez zero")
+    if b % 2:
+        print("Liczba jest podzielna")
+    else :
+        print("Liczba nie jest podzielna")
+
+'''
+'''
+        #6  
+def guess_game(max_tries=5):
+    import random
+    liczba = random.randint(1, 10)
+    proby = 0
+    while proby < max_tries:
+        guess = int(input("Podaj liczbe: "))
+        if guess == liczba:
+            print("Brawo zgadłeś")
+            break
+        else:
+            print("Nie udało się")
+            proby += 1
+    else:
+        print(f"Przegrałeś! Prawidłowa liczba to {liczba}")
+
+            
+'''
+#7
+
+
+
+
